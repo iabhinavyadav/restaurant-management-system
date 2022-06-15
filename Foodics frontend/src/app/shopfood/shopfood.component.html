@@ -1,0 +1,68 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="/admin-dashboard" class="navbar-brand" style="color:rgb(242,98,28)  ; font-size: x-large; font-weight: bolder;">
+          Foodics</a></div>
+        <ul class="navbar-nav">
+            <li><a  class="nav-link" routerLink="/shop"  >Menu</a></li>
+            <li><a  class="nav-link" routerLink="/booking"  >Bookings</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a routerLink="/admin-dashboard/users" class="dropdown-item">Users</a>
+                    <a routerLink="/admin-dashboard/products" class="dropdown-item">Foods</a>
+                    <a routerLink="/bookinglist" class="dropdown-item">Bookings</a>
+                    
+                </div>
+            </li>
+           
+        </ul>
+        <ul class="navbar-nav">
+            <a routerLink="/login">Log Out</a>
+          </ul>
+    </nav>
+</header>
+
+<section style="background-color: #eee;">
+    <div class="text-center container py-5">
+      <!-- <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4> -->
+  
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4" *ngFor="let food of products;let i=index">
+          <div class="card">
+            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+              data-mdb-ripple-color="light">
+              <img src="{{food.retrievedImage}}"
+                class="w-100" />
+              <a href="#!">
+               
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+            <div class="card-body">
+              
+                <h5 class="card-title mb-3">{{food.name}}</h5>
+              
+              
+                <p>{{food.description}}</p>
+              
+              <div class="offset-md-4 col-md-4">
+                <button class="btn btn-primary btn-sm" style="background-color: rgb(242,98,28); border-color: rgb(242,98,28);" >₹ {{food.price}}</button>
+                   
+            </div>
+            </div>
+          </div>
+        </div>
+  
+     
+  
+        
+      </div>
+  
+     
+    </div>
+  </section>

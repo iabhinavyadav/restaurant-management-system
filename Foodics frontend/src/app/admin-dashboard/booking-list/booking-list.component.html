@@ -1,0 +1,52 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="/admin-dashboard" class="navbar-brand" style="color:rgb(242,98,28)  ; font-size: x-large; font-weight: bolder;">
+          Foodics</a></div>
+        <ul class="navbar-nav">
+            <li><a  class="nav-link" routerLink="/shop"  >Shop</a></li>
+            <li><a  class="nav-link" routerLink="/booking"  >Bookings</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a routerLink="/admin-dashboard/users" class="dropdown-item">Users</a>
+                    <a routerLink="/admin-dashboard/products" class="dropdown-item">Foods</a>
+                    <a routerLink="/bookinglist" class="dropdown-item">Bookings</a>
+
+                </div>
+            </li>
+           
+        </ul>
+        <ul class="navbar-nav">
+            <a routerLink="/login">Log Out</a>
+          </ul>
+    </nav>
+</header>
+
+<div class="container mt-3">
+    <h2 style=" font-size: x-large; font-weight: bolder; text-align: center; text-decoration: underline;">Booking List</h2>
+             
+    <table class="table table-striped">
+      <thead>
+        <tr style="background-color:rgb(242,98,28) ;">
+          <th>Id</th>
+          <th>Name</th>
+          <th>Mobile Number</th>
+          <th>Seats</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bookings of booking">
+          <td>{{bookings.id}}</td>
+          <td>{{bookings.name}}</td>
+          <td>{{bookings.mobileNumber}}</td>
+          <td>{{bookings.seats}}</td>
+          <td>{{bookings.date}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>

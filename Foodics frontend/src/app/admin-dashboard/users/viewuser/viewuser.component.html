@@ -1,0 +1,26 @@
+
+<div class="userDetails">
+    <h2>User details</h2>
+  
+    <table>
+      <tr>
+        <td>User Id</td>
+        <td>{{user.id}}</td>
+      </tr>
+      <tr>
+        <td>UserName</td>
+        <td>{{user.username}}</td>
+      </tr>
+      <tr>
+        <td>Email Id</td>
+        <td>{{user.emailid}}</td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>{{user.password}}</td>
+      </tr>
+  
+    </table>
+    <br>
+    <a class="btn btn-small btn-danger" (click)="deleteUser()" > Delete</a>
+  </div>

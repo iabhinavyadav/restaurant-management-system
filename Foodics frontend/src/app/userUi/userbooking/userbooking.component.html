@@ -1,0 +1,98 @@
+
+<header>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <div><a href="/userUI" class="navbar-brand"
+			style="color:rgb(242,98,28)  ; font-size: x-large; font-weight: bolder;">Foodics</a></div>
+        <ul class="navbar-nav">
+            <li><a  class="nav-link" routerLink="/userUI/shop"  >Menu</a></li>
+            <li><a  class="nav-link" routerLink="/userUI/booking"  >Bookings</a></li>
+            
+           
+        </ul> &nbsp; 
+        <ul class="navbar-nav">
+            <a routerLink="/login">Log Out</a>
+          </ul>
+    </nav>
+</header>
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<title>Booking Form HTML Template</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+	<link type="text/css" rel="stylesheet" href="userbooking.component.css" />
+
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Make your reservation</h1>
+							<p>Now, you can reserve a seat in our restaurant just sitting at your home or around anywhere. Once you book the
+                table, your seat will be reserved, you can call once us 15 min before arriving.So that you can enjoy your reservation without 
+                any delay. 
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form  #BookTables="ngForm" (ngSubmit)="bookTables()">
+								<div class="form-group">
+									<span class="form-label">Your Name</span>
+									<input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" [(ngModel)]="booking.name">
+								</div>
+								<div class="form-group">
+									<span class="form-label">Mobile Number</span>
+                  <input type="text" class="form-control" id="mob" placeholder="Enter your mobile number" name="mob" [(ngModel)]="booking.mobileNumber">
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Date</span>
+                      <input type="date" class="form-control" id="dt" placeholder="Enter booking date" name="dt" [(ngModel)]="booking.date">
+										</div>
+									</div>
+							
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span class="form-label">Seats</span>
+                        <input type="" class="form-control" id="set" placeholder="Table Seats" name="set" [(ngModel)]="booking.seats">
+												
+											</div>
+									
+								</div>
+								
+									
+								</div>
+								<div class="form-btn">
+									<button class="submit-btn" type="submit" >Book table</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

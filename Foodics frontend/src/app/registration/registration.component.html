@@ -1,0 +1,115 @@
+<!-- <app-menu></app-menu>
+<div class="container mt-3">
+    <h2>Login Form</h2>
+    <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+      
+      <small [class.text-danger]="msg">{{msg}}</small>
+      <div class="mb-3 mt-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailid" required 
+        #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+          <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="username">User Name</label>
+        <input type="text" class="form-control"  placeholder="Enter username" name="username" [(ngModel)]="user.username"
+        required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" >
+        <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>
+      </div>
+
+      <div class="mb-3">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="user.password"
+        required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+      </div>
+
+      <div class="mb-3">
+        <label for="cpassword"> Confirm Password</label>
+        <input type="password" class="form-control"  placeholder="Enter confirm password" name="cpassword " (ngModel)="user.password"
+        required #cpassword="ngModel" [class.is-invalid]="cpassword.invalid && cpassword.touched" >
+        <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched ">Both password should same</small>
+      </div>
+
+     
+      <button [disabled]="Registerform.form.invalid"   type="submit" class="btn btn-success">Register</button>
+    </form>
+   
+    <small class="float-right btextual" [routerLink]="['/login']" >Existing User ? Login Here</small>
+  </div>
+ -->
+
+ <section class="vh-100 bg-image"
+  style="background-image: url('/assets/images/regform4.jpg'); background-position: bottom; background-size: cover;">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form>
+
+                <div class="form-outline mb-4">
+                    
+                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailid" required 
+        #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+          <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>
+        </div>
+                  </div>
+
+
+                <div class="form-outline mb-4">
+                  
+                  
+                  <label class="form-label" for="form3Example1cg">Username</label>
+                  <input type="text" class="form-control"  placeholder="Enter username" name="username" [(ngModel)]="user.username"
+                  required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" >
+                  <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>
+                </div>
+
+                
+
+                <div class="form-outline mb-4">
+                 
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                  <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="user.password"
+        required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                 
+                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                  <input type="password" class="form-control"  placeholder="Enter confirm password" name="cpassword " (ngModel)="user.password"
+        required #cpassword="ngModel" [class.is-invalid]="cpassword.invalid && cpassword.touched" >
+        <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched ">Both password should same</small>
+                </div>
+
+                
+
+                <div class="d-flex justify-content-center">
+                  <button style="background-color: rgb(242,98,28); border-color: rgb(242,98,28);" type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" (click)="registerUser()">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

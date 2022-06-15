@@ -1,0 +1,55 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="admin-dashboard" class="navbar-brand" style="color:rgb(242,98,28)  ; font-size: x-large; font-weight: bolder;">
+          Foodics</a></div>
+        <ul class="navbar-nav">
+            <li><a  class="nav-link" routerLink="/shop"  >Shop</a></li>
+            <li><a  class="nav-link" routerLink="/booking"  >Bookings</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                    <a routerLink="/admin-dashboard/users" class="dropdown-item">Users</a>
+                    <a routerLink="/admin-dashboard/products" class="dropdown-item">Foods</a>
+                    <a routerLink="/bookinglist" class="dropdown-item">Bookings</a>
+                </div>
+            </li>
+           
+        </ul>
+        <ul class="navbar-nav">
+            <a routerLink="/login">Log Out</a>
+          </ul>
+    </nav>
+</header>
+
+<h1 style=" font-size: x-large; font-weight: bolder; text-align: center; text-decoration: underline; padding-top: 15px;" >
+  All User List</h1>
+  <div class="allusers">
+<div class="container row" >
+    <div   class="col-md-6" >
+    <table class="table">
+      <thead>
+      <tr style="background-color: rgb(242,98,28);">
+        <th>ID</th>
+        <th>Name</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users" >
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="viewUser(user.id)">Show Details</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div   class="col-md-6" style="padding-left: 55px; padding-top:25px">
+    <app-viewuser *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-viewuser>
+
+  </div>
+</div>
+</div>

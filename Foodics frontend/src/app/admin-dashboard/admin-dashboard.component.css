@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+.logo{
+    width: 85px;
+    height: 65px;
+}
+
+.div1{
+
+    background-image: 
+    linear-gradient(to bottom, rgba(227, 228, 235, 0.52), rgba(117, 50, 19, 0.73)),
+    url('/assets/images/kitchen1.jpg');
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    padding-left: 35px;
+
+}
+.bg-color{
+    background-color: aqua;
+}
+.div2{
+align-items: left;
+text-align: left;
+padding-top: 150px;
+
+}
+.div2 h2{
+    color: rgb(247, 247, 247);
+    font-family: "Apple Chancery, cursive";
+    /* font-family: 'Caveat', cursive; */
+    font-size: 52px;
+}
+.div3{
+    /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; */
+  align-items: left;
+text-align: left;
+
+}
+.div3 p{
+    color:#f4511e ;
+    font-size: 65px;
+    /* font-family:'MutatorSans'; */
+    font-family: 'Montserrat', sans-serif;
+    
+    background-color: white;
+    padding-left: 5px;
+}
+.logo2{
+    width: 80%;
+   
+}
+.button1{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 65px;
+    padding: 2px;
+    width: 650px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.div4{
+    padding-top: 20px;
+  float: left;
+  padding-left: 10px;
+    
+  
+    
+    
+   
+}
+
+
+  .btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 14px 40px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  }
+  
+  .btn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #f4511e;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }  

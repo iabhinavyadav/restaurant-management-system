@@ -1,0 +1,27 @@
+<div class="productDetails">
+<h1>Food Details</h1>
+
+<table>
+    <tr>
+        <td>Food Id</td>
+        <td>{{product.id}}</td>
+    </tr>
+    <tr>
+        <td>Food Name</td>
+        <td>{{product.name}}</td>
+    </tr>
+    <tr>
+        <td>Food Description</td>
+        <td>{{product.description}}</td>
+    </tr>
+    <tr>
+        <td>Food Price</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>
+<br>
+<img src="{{product.retrievedImage}}" height="300" width="400">
+<br><br>
+<a class="btn btn-small btn-warning" (click)="editProduct()">edit</a> &nbsp; &nbsp;
+<a class="btn btn-small btn-danger" (click)="deleteProduct()">delete</a>
+</div>
