@@ -33,6 +33,6 @@ ng serve
 
 1. Open the backend project in Eclipse IDE.
 2. Change the configuration in application.properties acording to your oracle id and password. Try not to change the port number.
-3. Open the package com.zira.restaurant and choose the java file in it. And run the java file as Spring Boot App.
+3. Open the package com.user.demo and choose the LoginSignUpApplication.java file in it. And run the java file as Spring Boot App.
 
 > Note: Try using the default port in both frontend as well as backend
